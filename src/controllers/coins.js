@@ -15,9 +15,9 @@ router.get('/compare', (req, res) => {
           const yesterday = Object.values(js)[0];
           const change = today - yesterday;
           res.status(STATUS_SUCCESS);
-          if (change === 0) res.send(`Amazingly Bitcoin hasnt changed value since closing yesterday`);
-          if (change < 0) res.send(`Bitcoin has fallen $${change.toFixed(2)} since closing yesterday`);
-          if (change > 0) res.send(`Bitcoin has risen $${change.toFixed(2)} since closing yesterday`);
+          if (change === 0) res.send(`Amazingly Bitcoin hasnt changed value since closing yesterday.`);
+          if (change < 0) res.send(`Bitcoin has fallen $${change.toFixed(2)} since closing yesterday.`);
+          if (change > 0) res.send(`Bitcoin has risen $${change.toFixed(2)} since closing yesterday.`);
         })
         .catch(err => {
           res.status(STATUS_USER_ERROR);
